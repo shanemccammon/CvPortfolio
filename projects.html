@@ -43,6 +43,16 @@
 
     /* Ensure everything stacks vertically (no side-by-side layout) */
     .projects-vertical { display: block; }
+
+    /* Adjustable images you place inside sections */
+  .section-image {
+    width: var(--img-width, 100%);     /* change per-image with --img-width */
+    max-width: var(--img-max, 700px);  /* change per-image with --img-max */
+    height: auto;
+    display: block;
+    margin: 10px 0 12px 0;
+    border-radius: 8px;
+  }
   </style>
 </head>
 <body>
@@ -222,6 +232,12 @@
       <!-- Experimental Physics -->
       <section id="experimental-physics" class="container">
         <h3 id="exp-heading">Experimental Physics</h3>
+         <img
+            src="media/Solar_Flares.jpg"
+            alt="Solar flare analysis visualization"
+            class="section-image"
+            style="--img-max: 900px;"
+          >
         <p class="description">Participated in research on coronal heating of the Sun determined by solar flare frequency and distribution led by Dr. James Paul Mason and became a published author. My contributions were done by performing the following:
           <ul>
           <li>Imported GOES-15 solar flare X-ray (longwave) data from the Space Weather Data Portal and converted irradiance (W/m²) into total flare power (erg/s) using 4π(1 AU)² and 1 W = 10<sup>7</sup> erg/s.</li>
@@ -238,6 +254,12 @@
       <!-- Embedded AI -->
       <section id="embedded-ai" class="container">
         <h3 id="ai-heading">Embedded AI</h3>
+        <img
+          src="media/cnn_stack.jpg"
+          alt="CNN stack diagram"
+          class="section-image"
+          style="--img-max: 800px;"
+        >
         <p class="description">Introductory course studying AI application for embedded systems. We built, trained, and quantized TensorFlow Lite models and explored deployment on microcontrollers. A repository of my final lab write-ups for each project can be found below.</p>
         <a href="https://github.com/shanemccammon/Embedded-AI.git" target="_blank" rel="noopener" class="button">Embedded AI GitHub Repo</a>
       </section>
